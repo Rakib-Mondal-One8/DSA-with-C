@@ -14,7 +14,7 @@ union s
 int main ()
 {
     // union s rakib;
-    rakib.marks = 95;
+    rakib.marks = 97;
     // rakib.id = 5;
     printf("%d\n",rakib.marks);
     struct student r,m,v; //Locally decleared
