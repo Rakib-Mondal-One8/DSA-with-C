@@ -61,26 +61,22 @@ int main()
     struct node *third = (struct node *)malloc(sizeof(struct node));
     struct node *fourth = (struct node *)malloc(sizeof(struct node));
 
-    // initializing head node
     head->data = 7;
     head->next = second;
-    // initializing second node
     second->data = 11;
     second->next = third;
-    // initializing third node
     third->data = 77;
     third->next = fourth;
-    // initializing fourth node
     fourth->data = 69;
     fourth->next = NULL;
 
     Traversal(head);
-    // head = insert_at_head(head, 18);
-    // Traversal(head);
-    // insert_at_index(head, 17, 1);
-    // Traversal(head);
-    // insert_at_end(head, 10);
-    // Traversal(head);
+    head = insert_at_head(head, 18);
+    Traversal(head);
+    insert_at_index(head, 17, 1);
+    Traversal(head);
+    insert_at_end(head, 10);
+    Traversal(head);
     insert_after_node(second,69);
     Traversal(head);
     return 0;
