@@ -1,12 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
+const int MAX = 1e3;
+struct node* queue[MAX] = {-1};
+int top = -1;
 
 struct node{
-
     int val;
     struct node* left;
     struct node* right;
 };
+
 void inorder(struct node* root){
     if(root->left == NULL && root->right == NULL){
         printf("%d ",root->val);
@@ -27,7 +30,18 @@ void preorder(struct node* root){
     preorder(root->left);
     preorder(root->right);
 }
-
+struct node* create(int n){
+    struct node* root = (struct node*)malloc(sizeof(struct node));
+    int val;
+    scanf("%d",&val);
+    root->val = val;
+    root->left = NULL;
+    root->right = NULL;
+    for(int i=0;i<n-1;i++){
+        int left = -1,right = -1;
+        scanf("%d",&left);
+    }
+}
 void postorder(struct node* root){
     if (root->left == NULL && root->right == NULL)
     {
